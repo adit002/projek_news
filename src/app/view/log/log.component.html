@@ -1,0 +1,35 @@
+<!--<section class="section lb">-->
+  <div style="background: #141414; height: auto; width: 100%" class="skin-dark">
+    <div class="container" style="padding: 4%; height: 100vh">
+      <div class="row tengah">
+        <div class="col-md-6">
+          <div class="widget" style="align-content: center">
+            <div class="custom-module">
+              <h4 class="module-title" style="color: white"><i class="material-icons">lock_open</i> Login Account</h4>
+              <div class="panel panel-primary">
+                <div class="panel-body">
+                  <div class="login-buttons">
+                    <a href="#" class="btn btn-raised btn-facebook btn-block"><i class="fa fa-facebook"></i> Login with Facebook</a>
+                    <a href="#" class="btn btn-raised btn-twitter btn-block"><i class="fa fa-twitter"></i> Login with Twitter</a>
+                    <a href="#" class="btn btn-raised btn-google-plus btn-block"><i class="fa fa-google-plus"></i> Login with Google+</a>
+                  </div>
+  
+                  <form class="sidebar-login" style="color: white" [formGroup]="loginForm" (ngSubmit)="loginProcess($event)">
+                    <input type="text" class="form-control" placeholder="Username" formControlName="username">
+                    <input type="text" class="form-control" placeholder="Password" formControlName="password">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> &nbsp;&nbsp;Remember me
+                      </label>
+                    </div>
+                    <button type="button" class="btn btn-raised btn-info gr" type="submit">Login</button>
+                  </form>
+                </div>
+              </div>
+            </div><!-- end custom-module -->
+          </div><!-- end widget -->
+        </div>
+      </div><!-- end row -->
+    </div><!-- end container -->
+  <!--</section>&lt;!&ndash; end section &ndash;&gt;-->
+  </div>

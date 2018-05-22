@@ -1,0 +1,124 @@
+<div class="skin-dark background-basic" id="dashboard-dark" style="overflow: hidden; display: block">
+  <header>
+    <!-- START HEADER TOP SECTION -->
+    <div class="header-top pink">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+            <!-- Start header social -->
+            <!--<div class="header-social">-->
+              <!--<ul>-->
+                <!--<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+                <!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+                <!--<li><a href="#"><i class="fa fa-vk"></i></a></li>-->
+                <!--<li><a href="#"><i class="fa fa-instagram"></i></a></li>-->
+                <!--<li class="hidden-xs"><a href="#"><i class="fa fa-youtube-play"></i></a></li>-->
+                <!--<li class="hidden-xs"><a href="#"><i class="fa fa-vimeo"></i></a></li>-->
+              <!--</ul>-->
+            <!--</div>-->
+            <!-- End of /. header social -->
+            <!-- Start top left menu -->
+            <!--<div class="top-left-menu">-->
+              <!--<ul>-->
+                <!--<li><a href="#">Contact</a></li>-->
+              <!--</ul>-->
+            <!--</div>-->
+            <!-- End of /. top left menu -->
+          </div>
+          <!-- Start header top right menu -->
+          <div class="hidden-xs col-md-6 col-sm-6 col-lg-6">
+            <div class="header-right-menu">
+              <ul>
+                <li> 
+                  <a routerLink="/register"> Register</a>
+                  <a routerLink="/login" (click)="onLogin()">Login</a>
+                  
+                </li>
+                <!-- <li> -->
+                  <a (click)="logout()" style="cursor:pointer">Logout</a>
+                 &nbsp;&nbsp; <span style="color:white"><i class="fa fa-user"></i>{{UserLogin}}</span>
+                <!-- </li> -->
+              </ul>
+            </div>
+          </div> <!-- end of /. header top right menu -->
+        </div> <!-- end of /. row -->
+      </div> <!-- end of /. container -->
+    </div>
+    <!-- END OF /. HEADER TOP SECTION -->
+    <!-- START MIDDLE SECTION -->
+    <div class="header-mid hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1">
+            <div class="logo">
+              <a href="index.html">
+                <!--<img src="../../../assets/images/logo/logo_putih5.png" class="img-responsive" alt="">-->
+                <h1 style="color: white; padding-left: 0">IndoLine</h1>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <!--<a href="#"><img src="../../../assets/images/logo/logo_putih.png" class="img-responsive" alt=""></a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF /. MIDDLE SECTION -->
+    <!-- START NAVIGATION -->
+    <div class="container">
+      <div class="row">
+      <nav class="navbar navbar-default navbar-sticky navbar-mobile bootsnav">
+        <!-- Start Top Search -->
+        <div class="top-search">
+          <div class="container">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-search"></i></span>
+              <input type="text" class="form-control" placeholder="Search">
+              <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- End Top Search -->
+        <div class="container" style="margin-left: -15px;">
+          
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+              <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#brand"><img src="../assets/images/logo-white.png" class="logo" alt=""></a>
+          </div >
+          
+          <!-- End Header Navigation -->
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div *ngIf=" path === 'main' ">
+          <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav navbar-left" data-in="" data-out="">
+              <li class="dropdown active">
+                <a routerLink="/home" class="dropdown-toggle" data-toggle="dropdown" >HeadLine</a>
+              </li>
+              <li class="dropdown megamenu-fw">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" routerLink="/lineNews">LineNews</a>
+              </li>
+              <li class="dropdown megamenu-fw hidden-xs">
+                <a routerLink="/header-forum" class="dropdown-toggle" data-toggle="dropdown">LineForum</a>
+              </li>
+              <li class="dropdown">
+                <a routerLink="/line-market"  class="dropdown-toggle" data-toggle="dropdown" >LineMarkets</a>
+              </li>
+            </ul>
+
+          </div><!-- /.navbar-collapse -->
+        </div>
+        <div *ngIf="path === 'login'">
+           
+        </div>
+        </div>
+      </nav>
+      </div>
+      </div>
+    <!-- END OF/. NAVIGATION -->
+  </header>
+
+</div>
+
+

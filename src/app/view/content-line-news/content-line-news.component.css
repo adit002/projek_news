@@ -1,0 +1,96 @@
+.paginationx {
+    margin-top: 0;
+    text-align: right;
+    right: 51px;
+}
+
+.paginationx /deep/ .ngx-pagination .current {
+    background-color: #4e8193 !important;
+    color: #fff;
+}
+
+.paginationx /deep/ .ngx-pagination a:hover,
+.ngx-pagination button:hover {
+    background-color: #4e8193 !important;
+    color: #fff;
+}
+
+.ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: #eb0254 !important;
+    color: #fefefe;
+    cursor: default;
+    margin-top: 4px;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ngx-pagination li {
+    display: inline-block;
+    /* margin-top: 6px; */
+    margin-bottom: 4px;
+}
+.ngx-pagination li {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-right: 0.0625rem;
+    border-radius: 0;
+}
+
+.ngx-pagination .disabled {
+    padding: 0.1875rem 0.625rem;
+    color: #cacaca;
+    cursor: default;
+    margin-top: 4px;
+}
+
+
+.my-pagination /deep/ .ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: #eb0254 !important;
+    color: #fefefe;
+    cursor: default;
+    margin-top: 2px;
+    /* padding: 6px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+  }
+
+  .my-pagination /deep/ .ngx-pagination .disabled {
+    padding: 0.1875rem 0.625rem;
+    color: #cacaca;
+    cursor: default;
+    margin-top: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+
+  .my-pagination /deep/ .ngx-pagination li {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-right: 0.0625rem;
+    border-radius: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom:6px;
+    border:none;
+  }
+
+  .my-pagination /deep/ .ngx-pagination a {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-right: 0.0625rem;
+    border-radius: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom:6px;
+  }

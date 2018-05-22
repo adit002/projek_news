@@ -1,0 +1,82 @@
+<div class="comments-container background-content">
+  <h3 class="font-white">Comments </h3>
+  <ul class="comments-list">
+    <li>
+      <div class="comment-main-level" *ngFor="let data of datas let i =index">
+        <div class="comment-avatar"><img src="../../../assets/images/logo/logo_putih.png" alt=""></div>
+        <div class="comment-box">
+          <div class="comment-content">
+            <div class="comment-header"> <cite class="comment-author font-white">Indoline Account</cite>
+              <time datetime="2012-10-27" class="comment-datetime ">{{data.tanggal}}</time>
+            </div>
+            <div style="border: 0.5px solid white; border-radius: 5px; padding-left: 5%; height: 30px; padding-top: 5px">
+              <p class="font-content" style="color:white;">{{data.komentar}}</p>
+            </div>
+            <!--replay-------------------------------------------------------->
+            <div id="replay2" class="reply-list" *ngFor="let data of getCommentReplay">
+              <div class="comment-avatar" *ngIf="show === i"><img src="../../../assets/images/logo/logo_putih.png" alt=""></div>
+              <div class="comment-content" style="margin-left: 15%">
+                <div class="comment-header"> <cite class="comment-author font-white">Indoline Account</cite>
+                  <time datetime="2012-10-27" class="comment-datetime ">{{data.tanggal}}</time>
+                </div>
+              </div>
+              <div style="border: 0.5px solid white; border-radius: 5px; padding-left: 5%; height: 30px; padding-top: 5px; margin-left: 15%">
+                <p class="font-content" style="color:white;">{{data.komentar}}</p>
+              </div>
+            </div>
+            <a class="btn button-submit font-white" (click)="replay(i)" style="border-radius: 5px"> Reply</a>
+            <div *ngIf="show === i" id="textkomen2">
+              <textarea (keyup.enter)="SendCommentReplay(data._id,textarea.value, i)"   style="border-radius: 5px;float: right; height: 40px; width: 100%; color: black; text-align: center; padding-top: 1%;" placeholder="Input your text" #textarea ></textarea>
+              <a class="btn button-submit font-white" style="border-radius: 5px; float: right" (click)="close()">Close</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="comment-main-level" *ngFor="let data of lastcomment let i =index">
+        <div class="comment-avatar"><img src="../../../assets/images/logo/logo_putih.png" alt=""></div>
+        <div class="comment-box">
+          <div class="comment-content">
+            <div class="comment-header"> <cite class="comment-author font-white">Indoline Account</cite>
+              <time datetime="2012-10-27" class="comment-datetime ">{{data.tanggal}}</time>
+            </div>
+            <div style="border: 0.5px solid white; border-radius: 5px; padding-left: 5%; height: 30px; padding-top: 5px">
+              <p class="font-content" style="color:white;">{{data.komentar}}</p>
+            </div>
+            <!--replay-------------------------------------------------------->
+            <div id="replay" class="reply-list" *ngFor="let data of getCommentReplay">
+              <div class="comment-avatar" *ngIf="show === i"><img src="../../../assets/images/logo/logo_putih.png" alt=""></div>
+              <div class="comment-content" style="margin-left: 15%">
+                <div class="comment-header"> <cite class="comment-author font-white">Indoline Account</cite>
+                  <time datetime="2012-10-27" class="comment-datetime ">{{data.tanggal}}</time>
+                </div>
+              </div>
+              <div style="border: 0.5px solid white; border-radius: 5px; padding-left: 5%; height: 30px; padding-top: 5px; margin-left: 15%">
+                <p class="font-content" style="color:white;">{{data.komentar}}</p>
+              </div>
+            </div>
+            <a class="btn button-submit font-white" (click)="replay(i)" style="border-radius: 5px"> Reply</a>
+            <div *ngIf="show === i" id="textkomen">
+              <textarea (keyup.enter)="SendCommentReplay(data._id,textarea.value, i)"   style="border-radius: 5px;float: right; height: 40px; width: 100%; color: black; text-align: center; padding-top: 1%;" placeholder="Input your text" #textarea ></textarea>
+              <a class="btn button-submit font-white" style="border-radius: 5px; float: right" (click)="close()">Close</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+<!-- START COMMENTS FORMS -->
+<form class="comment-form background-content" action="#" method="post">
+  <h3 style="color: white"> Leave a Comment</h3>
+  <div class="form-group" style="background-color: white">
+    <textarea class="form-text" id="text" name="message" placeholder="Your Comment*" rows="5" #textarea style="color: black; " (keyup.enter)="SendComment(textarea.value)" ></textarea>
+  </div>
+  <a class="btn button-submit font-white" (click)="SendComment(textarea.value)">Send Response</a>
+</form>
+<!-- END OF /. COMMENTS FORMS -->
+

@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+
+    <app-category-forum></app-category-forum>
+
+    <div class="col-md-8">
+      <div style="background: #141414; height: auto; width: 100%" class="skin-dark">
+        <aside class="topic-page topic-list blog-list forum-list">
+
+          <article class="well btn-group-sm clearfix conten-forum cursor" *ngFor="let data of datas; let i=index">
+            <div *ngFor="let likes of data2"></div>
+            <!-- <div class=" row-fluid clearfix" (click)="clickId(data._id)"> -->
+            <div class=" row-fluid clearfix" (click)="clickId(data._id)">
+              <div class="col-sm-2 text-center publisher-wrap">
+                <img src="../../../assets/images/logo/logo_putih.png" alt="" class="img-responsive">
+                <h5 class="font-white">{{data.moderator}}</h5>
+              </div>
+              <div class="col-sm-10">
+                <h4>
+                  <a routerLink="/detail-forum">{{data.judul_topic | slice : 0:100}}</a>
+                </h4>
+                <div class="blog-meta clearfix">
+                  <small>{{data.tanggal_buat | date}}</small>
+                  <small>in:
+                    <a style="color: red"></a>{{data.category}}</small>
+                </div>
+
+                <p style="color: white" class="font-content">{{data.isi_topic | slice :0:100}}</p>
+                <a class="readmore" title="" routerLink="/detail-forum">View the topic →</a>
+              </div>
+
+              <!-- <div class="pull-right">
+                  <a title="Like">
+                    <a>Like:</a>
+                  </a> <span class="font-white">{{cek}}</span>
+                  <a title="Dislike">
+                    <a>Dislike:</a>
+                  </a> <span class="font-white"></span>
+                  <a title="Bookmark">
+                    <a>View:</a>
+                  </a><span class="font-white"></span>
+                </div> -->
+
+              <div class="pull-right">
+                <p style="color:white">
+                  <p style="color:white">{{likes}}</p>
+                  <p>{{cek}} </p>
+                  <a class="btn btn-default btn-fab btn-fab-mini abu font-white" data-toggle="tooltip" data-placement="bottom" title="Like"
+                    (click)="Likes(data._id)">
+                    <i class="material-icons font-white">thumb_up</i>
+                  </a>
+                  <a class="btn btn-default btn-fab btn-fab-mini abu font-white" data-toggle="tooltip" data-placement="bottom" title="Un Like">
+                    <i class="material-icons font-white">thumb_down</i>
+                  </a>
+
+              </div>
+
+              <div class="pull-right" style="padding-top: 10px">
+                <div class="customshare">
+                  <div class="list">
+                    <div class="btn btn-default btn-fab btn-fab-mini abu font-white">
+                      <i class="material-icons font-white">share</i>
+                      <ul class="list-inline">
+                        <li>
+                          <a href="#" class="tw">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="fb">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="gp">
+                            <i class="fa fa-google-plus"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+ <!-- START POST BLOCK SECTION -->
+            <section class="slider-inner">
+                <div class="container">
+                    <div class="row thm-margin">
+                        <div class="col-xs-12 col-sm-8 col-md-8 thm-padding">
+                          <ngx-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)">
+                              <ngx-item NgxCarouselItem *ngFor="let data of datas;">
+                                  <div class="slider-post" (click)="clickId(data._id)">
+                                  <img style="height:460px; width:100%" src="{{data.img_title}}">
+                                  <h4><a>{{data.title}}</a></h4>
+                                  </div>
+                              </ngx-item>
+                              <button NgxCarouselPrev class='leftRs' style="display:none">&#10094;</button>
+                              <button NgxCarouselNext class='rightRs' style="display:none">&#10095;</button>
+                          </ngx-carousel>       
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 thm-padding">
+                            <div class="row slider-right-post thm-margin">
+                              <div class="col-xs-6 col-sm-12 col-md-12 thm-padding" *ngFor="let tredingSide of datas" (click)="clickId(tredingSide._id)">
+                                    <div class="slider-post post-height-2">
+                                        <a class="news-image"><img src="{{tredingSide.img_title}}" alt="" class="img-responsive"></a>
+                                        <div class="post-text">
+                                            <span class="post-category">{{tredingSide.source}}</span>
+                                            <h4><a href="#">{{tredingSide.title}}</a></h4>
+                                            <ul class="authar-info">
+                                                <li class="authar hidden-xs hidden-sm"><a href="#">by {{tredingSide.source}}</a></li>
+                                                <li class="hidden-xs">{{tredingSide.date_post}}</li>
+                                                <!--<li class="view hidden-xs hidden-sm"><a href="#">25 views</a></li>-->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END OF /. POST BLOCK SECTION -->

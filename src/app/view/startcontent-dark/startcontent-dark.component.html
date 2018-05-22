@@ -1,0 +1,6 @@
+<div class="container">
+    <div class="newstricker_inner" *ngFor="let data of datas; let i = index;">
+        <div class="trending" *ngIf="i == [0]"><strong class="font-white">Trending</strong> Now</div>
+        <div class="font-white" *ngIf="i == [0]">{{data.date_post}}</div>
+    </div>
+</div>

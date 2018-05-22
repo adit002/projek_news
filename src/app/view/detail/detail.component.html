@@ -1,0 +1,46 @@
+<main class="page_main_wrapper m-t-20">
+			<app-line-news></app-line-news>
+            <div class="container">
+				
+                <div class="row row-m">
+                    <!-- START MAIN CONTENT -->
+                    <div class="col-sm-8 col-p  main-content">
+                        <div class="theiaStickySidebar">
+                            <div *ngFor="let data of detailNews" class="post_details_inner">
+                                <span class="post-category">{{data.source}}</span>
+                                <div class="post_details_block">
+                                    <figure class="social-icon">
+                                        <img src="{{data.img_title}}" class="img-responsive" alt=""/>
+                                        <div>
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#" class="hidden-xs"><i class="fa fa-linkedin"></i></a>
+                                            <a href="#" class="hidden-xs"><i class="fa fa-pinterest-p"></i></a>
+                                        </div>			
+                                    </figure>
+                                    <h2 class="font-white">{{data.title}}</h2>
+
+                                    <p class="font-content justify" style="color: white">
+									{{data.content}}
+									</p>
+                                    
+                                    
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+
+						<app-comment-news></app-comment-news>
+                    </div>
+                    <!-- END OF /. MAIN CONTENT -->
+                    
+                </div>
+            </div>
+        </main>
+        <!-- *** END OF /. PAGE MAIN CONTENT *** -->
+
+
+
+

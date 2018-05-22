@@ -1,0 +1,29 @@
+<div class="line">
+	<div>Latest News</div>
+</div>
+<div class="row">
+	<div *ngFor="let item of datas">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="row">
+				<article class="article col-md-12">
+					<div class="inner">
+						<figure>
+							<a href="single.html">
+								<img src="{{item.img_title}}">
+							</a>
+						</figure>
+						<div class="padding">
+							<div class="detail">
+								<div class="time">{{item.date_post}}</div>
+								<!--<div class="category"><a href="category.html">Healthy</a></div>-->
+							</div>
+							<h2><a href="single.html">{{item.title}}</a></h2>
+							<p>{{item.content|slice:0:100}}</p>
+						</div>
+					</div>
+				</article>
+				
+			</div>
+		</div>
+	</div>
+</div>
